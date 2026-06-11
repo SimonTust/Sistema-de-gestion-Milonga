@@ -1,0 +1,6 @@
+#ifndef SUELDO_H_INCLUDED
+#define SUELDO_H_INCLUDED
+
+
+
+#endif // SUELDO_H_INCLUDED

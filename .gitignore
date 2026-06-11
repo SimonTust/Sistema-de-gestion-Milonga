@@ -1,0 +1,14 @@
+# Code::Blocks
+*.depend
+*.layout
+
+# Carpetas generadas al compilar
+bin/
+obj/
+
+# Ejecutables
+*.exe
+
+# Temporales
+*.o
+*.tmp

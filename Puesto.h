@@ -1,0 +1,6 @@
+#ifndef PUESTO_H_INCLUDED
+#define PUESTO_H_INCLUDED
+
+
+
+#endif // PUESTO_H_INCLUDED

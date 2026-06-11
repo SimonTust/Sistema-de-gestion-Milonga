@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TPI_SistemaGestion_V1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TPI_SistemaGestion_V1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/TPI_SistemaGestion_V1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="ArchivoAsistencias.h" />
+		<Unit filename="ArchivoEgresos.cpp" />
+		<Unit filename="ArchivoEgresos.h" />
+		<Unit filename="ArchivoEmpleados.cpp" />
+		<Unit filename="ArchivoEmpleados.h" />
+		<Unit filename="ArchivoIngresos.cpp" />
+		<Unit filename="ArchivoIngresos.h" />
+		<Unit filename="ArchivoPuestos.cpp" />
+		<Unit filename="ArchivoPuestos.h" />
+		<Unit filename="ArchivoSueldos.cpp" />
+		<Unit filename="ArchivoSueldos.h" />
+		<Unit filename="ArchivoVacaciones.cpp" />
+		<Unit filename="ArchivoVacaciones.h" />
+		<Unit filename="Archivoasistencias.cpp" />
+		<Unit filename="Asistencia.cpp" />
+		<Unit filename="Asistencia.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Egreso.cpp" />
+		<Unit filename="Egreso.h" />
+		<Unit filename="Empleado.cpp" />
+		<Unit filename="Empleado.h" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="FuncionesEmpleado.cpp" />
+		<Unit filename="FuncionesEmpleado.h" />
+		<Unit filename="FuncionesEmpleados.cpp" />
+		<Unit filename="FuncionesEmpleados.h" />
+		<Unit filename="GestionAsistencias.cpp" />
+		<Unit filename="GestionAsistencias.h" />
+		<Unit filename="GestionEgresos.cpp" />
+		<Unit filename="GestionEgresos.h" />
+		<Unit filename="GestionEmpleados.cpp" />
+		<Unit filename="GestionEmpleados.h" />
+		<Unit filename="GestionIngresos.cpp" />
+		<Unit filename="GestionIngresos.h" />
+		<Unit filename="GestionPuestos.cpp" />
+		<Unit filename="GestionPuestos.h" />
+		<Unit filename="GestionSueldos.cpp" />
+		<Unit filename="GestionSueldos.h" />
+		<Unit filename="GestionVacaciones.cpp" />
+		<Unit filename="GestionVacaciones.h" />
+		<Unit filename="Ingreso.cpp" />
+		<Unit filename="Ingreso.h" />
+		<Unit filename="MenuPrincipal.cpp" />
+		<Unit filename="MenuPrincipal.h" />
+		<Unit filename="Puesto.cpp" />
+		<Unit filename="Puesto.h" />
+		<Unit filename="Sueldo.cpp" />
+		<Unit filename="Sueldo.h" />
+		<Unit filename="Vacacion.cpp" />
+		<Unit filename="Vacacion.h" />
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
