@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<ResourceCompiler>
+			<Add directory="C:/Users/Simon Tust/Desktop/C++UTN/TPI_SistemaGestion_V1/TPI_SistemaGestion_V1/libs" />
+		</ResourceCompiler>
 		<Unit filename="ArchivoAsistencias.h" />
 		<Unit filename="ArchivoEgresos.cpp" />
 		<Unit filename="ArchivoEgresos.h" />
