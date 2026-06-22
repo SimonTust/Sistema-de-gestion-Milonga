@@ -1,6 +1,15 @@
-#ifndef GESTIONPUESTOS_H_INCLUDED
-#define GESTIONPUESTOS_H_INCLUDED
+#pragma once
+#include "ArchivoPuestos.h"
 
+class GestionPuestos {
+private:
+    ArchivoPuestos _archivoPuestos;
 
-
-#endif // GESTIONPUESTOS_H_INCLUDED
+public:
+    GestionPuestos();
+    
+    void menu(); 
+    void cargarPuesto(); 
+    void listarPuestos(); 
+    void buscarPuesto(); 
+};
