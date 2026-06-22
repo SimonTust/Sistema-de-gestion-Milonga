@@ -77,6 +77,8 @@
 		<Unit filename="GestionSueldos.h" />
 		<Unit filename="GestionVacaciones.cpp" />
 		<Unit filename="GestionVacaciones.h" />
+		<Unit filename="Hora.cpp" />
+		<Unit filename="Hora.h" />
 		<Unit filename="Ingreso.cpp" />
 		<Unit filename="Ingreso.h" />
 		<Unit filename="MenuPrincipal.cpp" />
