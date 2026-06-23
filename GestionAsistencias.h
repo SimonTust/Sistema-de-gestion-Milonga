@@ -1,6 +1,14 @@
-#ifndef GESTIONASISTENCIAS_H_INCLUDED
-#define GESTIONASISTENCIAS_H_INCLUDED
+#pragma once
+#include "ArchivoAsistencias.h"
 
+class GestionAsistencias {
+private:
+    ArchivoAsistencias _archivoAsistencias;
 
-
-#endif // GESTIONASISTENCIAS_H_INCLUDED
+public:
+    GestionAsistencias();
+    
+    void menu();
+    void registrarAsistencia();
+    void listarAsistencias();
+};
