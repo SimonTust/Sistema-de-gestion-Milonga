@@ -1,6 +1,12 @@
-#ifndef GESTIONEGRESOS_H_INCLUDED
-#define GESTIONEGRESOS_H_INCLUDED
+#pragma once
+#include "ArchivoEgresos.h"
 
-
-
-#endif // GESTIONEGRESOS_H_INCLUDED
+class GestionEgresos {
+private:
+    ArchivoEgresos _archivoEgresos;
+public:
+    GestionEgresos();
+    void menu();
+    void registrarEgreso();
+    void listarEgresos();
+};
