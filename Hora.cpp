@@ -9,6 +9,11 @@ Hora::Hora(){
 
 }
 
+Hora::Hora(int hora, int minutos) {
+    _hora = hora;
+    _minutos = minutos;
+}
+
 
 int Hora::getHora(){return _hora;}
 int Hora::getMinutos(){return _minutos;}

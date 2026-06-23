@@ -9,6 +9,7 @@ class Hora{
 
     public:
         Hora();
+        Hora(int hora, int minutos);
         int getHora();
         int getMinutos();
 

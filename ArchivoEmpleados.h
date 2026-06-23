@@ -16,6 +16,7 @@ class ArchivoEmpleados{
         int CantidadRegistros();
         int UltimoEmpleado();
         void ListarEmpleados(int CantidadRegistros, Empleado *vector);
+        bool guardarEnPosicion(Empleado empleado, int posicion);
 
 };
 

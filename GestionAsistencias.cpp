@@ -34,7 +34,7 @@ void GestionAsistencias::registrarAsistencia() {
     cout << "ID Asistencia: ";
     cin >> idAsistencia;
 
-    if (_archivoAsistencias.buscar(idAsistencia) != -1) {
+    if (_archivoAsistencias.BuscarAsistencia(idAsistencia) != -1) {
         cout << "Error: ID de asistencia ya existente." << endl;
         return;
     }
@@ -43,7 +43,7 @@ void GestionAsistencias::registrarAsistencia() {
     cin >> idEmpleado;
 
     ArchivoEmpleados archEmp("Empleados.dat");
-    if (archEmp.buscar(idEmpleado) == -1) {
+    if (archEmp.BuscarEmpleado(idEmpleado) == -1) {
         cout << "Error: El empleado no existe en el sistema. No se puede fichar." << endl;
         return;
     }
@@ -63,7 +63,7 @@ void GestionAsistencias::registrarAsistencia() {
         cin >> hSal >> mSal;
         cout << "Total Horas Trabajadas en el dia: ";
         cin >> horasTrabajadas;
-        
+
         Hora hIn(hEnt, mEnt), hOut(hSal, mSal);
         reg.setHoraEntrada(hIn);
         reg.setHoraSalida(hOut);
@@ -80,7 +80,7 @@ void GestionAsistencias::registrarAsistencia() {
     reg.setFechaAsistencia(f);
     reg.setPresente(presente);
 
-    if (_archivoAsistencias.guardar(reg)) {
+    if (_archivoAsistencias.GuardarAsistencia(reg)) {
         cout << "Asistencia guardada correctamente." << endl;
     } else {
         cout << "Error al guardar en el archivo." << endl;
@@ -88,7 +88,7 @@ void GestionAsistencias::registrarAsistencia() {
 }
 
 void GestionAsistencias::listarAsistencias() {
-    int total = _archivoAsistencias.cantidadRegistros();
+    int total = _archivoAsistencias.CantidadRegistros();
     if (total == 0) {
         cout << "\nNo hay asistencias registradas." << endl;
         return;
@@ -96,10 +96,10 @@ void GestionAsistencias::listarAsistencias() {
 
     cout << "\n--- LISTADO GENERAL DE ASISTENCIAS ---" << endl;
     for (int i = 0; i < total; i++) {
-        Asistencia reg = _archivoAsistencias.leer(i);
-        cout << "ID Asis: " << reg.getIdAsistencia() 
-             << " | Empleado: " << reg.getIdEmpleado() 
-             << " | Presente: " << (reg.getPresente() ? "SI" : "NO") 
+        Asistencia reg = _archivoAsistencias.Leer(i);
+        cout << "ID Asis: " << reg.getIdAsistencia()
+             << " | Empleado: " << reg.getIdEmpleado()
+             << " | Presente: " << (reg.getPresente() ? "SI" : "NO")
              << " | Horas: " << reg.getTotalHorasTrabajadas() << endl;
     }
 }

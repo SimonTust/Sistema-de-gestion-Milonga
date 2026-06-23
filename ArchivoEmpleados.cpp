@@ -106,3 +106,24 @@ int ArchivoEmpleados::CantidadRegistros(){
     fclose(pArchivo);
     return cantidadRegistros;
 }
+
+bool ArchivoEmpleados::guardarEnPosicion(Empleado empleado, int posicion) {
+    FILE* pArchivo = fopen(_nombreArchivo.c_str(), "rb+");
+
+    if (pArchivo == nullptr) {
+        return false;
+    }
+
+    fseek(pArchivo, posicion * sizeof(Empleado), SEEK_SET);
+
+    bool resultado = fwrite(
+        &empleado,
+        sizeof(Empleado),
+        1,
+        pArchivo
+    );
+
+    fclose(pArchivo);
+
+    return resultado;
+}

@@ -35,7 +35,7 @@ void GestionEgresos::registrarEgreso() {
     cout << "ID Egreso: ";
     cin >> idEgreso;
 
-    if (_archivoEgresos.buscar(idEgreso) != -1) {
+    if (_archivoEgresos.BuscarEgreso(idEgreso) != -1) {
         cout << "Error: El ID de egreso ya existe." << endl;
         return;
     }
@@ -44,13 +44,13 @@ void GestionEgresos::registrarEgreso() {
     cin >> idEmpleado;
 
     ArchivoEmpleados archEmp("Empleados.dat");
-    int posEmp = archEmp.buscar(idEmpleado);
+    int posEmp = archEmp.BuscarEmpleado(idEmpleado);
     if (posEmp == -1) {
         cout << "Error: El empleado no existe." << endl;
         return;
     }
 
-    Empleado emp = archEmp.leer(posEmp);
+    Empleado emp = archEmp.Leer(posEmp);
     if (!emp.getEstado()) {
         cout << "Advertencia: El empleado ya se encuentra inactivo." << endl;
     }
@@ -66,17 +66,16 @@ void GestionEgresos::registrarEgreso() {
     cout << "Monto de Liquidacion Final: $";
     cin >> montoLiquidacion;
 
-    reg.setIdEgreso(idEgreso);
-    reg.setIdEmpleado(idEmpleado);
+    reg.setIDEgreso(idEgreso);
+    reg.setIDEmpleado(idEmpleado);
     reg.setFechaEgreso(fechaEgreso);
-    reg.setMotivo(motivo);
-    reg.setMontoLiquidacion(montoLiquidacion);
 
-    if (_archivoEgresos.guardar(reg)) {
-        
-        emp.setEstado(false); 
-        archEmp.guardarEnPosicion(emp, posEmp); 
-        
+
+    if (_archivoEgresos.GuardarEgreso(reg)) {
+
+        emp.setEstado(false);
+        archEmp.guardarEnPosicion(emp, posEmp);
+
         cout << "Egreso registrado correctamente y empleado dado de baja en el sistema." << endl;
     } else {
         cout << "Error al procesar el archivo de egresos." << endl;
@@ -84,7 +83,7 @@ void GestionEgresos::registrarEgreso() {
 }
 
 void GestionEgresos::listarEgresos() {
-    int total = _archivoEgresos.cantidadRegistros();
+    int total = _archivoEgresos.CantidadRegistros();
     if (total == 0) {
         cout << "\nNo hay egresos registrados." << endl;
         return;
@@ -92,10 +91,10 @@ void GestionEgresos::listarEgresos() {
 
     cout << "\n--- LISTADO GENERAL DE EGRESOS ---" << endl;
     for (int i = 0; i < total; i++) {
-        Egreso reg = _archivoEgresos.leer(i);
-        cout << "ID Egreso: " << reg.getIdEgreso() 
-             << " | Empleado: " << reg.getIdEmpleado() 
-             << " | Motivo: " << reg.getMotivo() 
-             << " | Liquidacion: $" << reg.getMontoLiquidacion() << endl;
+        Egreso reg = _archivoEgresos.Leer(i);
+        cout << "ID Egreso: " << reg.getIDEgreso();
+        cout << " | Empleado: " << reg.getIDEmpleado();
+
+
     }
 }
