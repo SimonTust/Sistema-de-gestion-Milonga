@@ -9,7 +9,7 @@ class ArchivoEmpleados{
 
     public:
         ArchivoEmpleados(std::string nombreArchivo);
-        bool GuardarEmpleado(Empleado Empleado);
+        bool GuardarEmpleado(Empleado empleado);
         int BuscarEmpleado(int idEmpleado);
         bool BuscarEmpleadoDNI(int dni);
         Empleado Leer(int posicion);
