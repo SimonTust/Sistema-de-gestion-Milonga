@@ -6,10 +6,12 @@ private:
     ArchivoPuestos _archivoPuestos;
 
 public:
-    GestionPuestos();
-    
-    void menu(); 
-    void cargarPuesto(); 
-    void listarPuestos(); 
-    void buscarPuesto(); 
+    GestionPuestos(std::string _nombreArchivo);
+
+    void menu();
+    void cargarPuesto();
+    void listarPuestos();
+    void buscarPuesto();
 };
+
+

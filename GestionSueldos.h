@@ -1,6 +1,16 @@
-#ifndef GESTIONSUELDOS_H_INCLUDED
-#define GESTIONSUELDOS_H_INCLUDED
+#pragma once
+#include "ArchivoSueldos.h"
 
+class GestionSueldos {
+private:
+    ArchivoSueldos _archivoSueldos;
 
+public:
+    GestionSueldos(std::string _nombreArchivo);
 
-#endif // GESTIONSUELDOS_H_INCLUDED
+    void menu();
+    void liquidarSueldos();
+    void listarSueldos();
+    void buscarSueldo();
+    void listarSueldosPorEmpleado();
+};

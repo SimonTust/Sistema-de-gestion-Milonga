@@ -20,7 +20,7 @@ bool ArchivoIngresos::GuardarIngreso(Ingreso ingreso){
 }
 
 Ingreso ArchivoIngresos::Leer(int posicion){
-    Ingresos ingreso;
+    Ingreso ingreso;
     FILE *pArchivo = fopen(_nombreArchivo.c_str(), "rb");
 
     if(pArchivo == NULL){
@@ -81,6 +81,32 @@ int ArchivoIngresos::UltimoIngreso(){
     }
     fclose(pArchivo);
     return maxID;
+}
+
+void ArchivoIngresos::ListarIngresos(int cantidadRegistros, Ingreso *vector){
+    FILE *pArchivo = fopen(_nombreArchivo.c_str(), "rb");
+    if(pArchivo == NULL){
+        return;
+    }
+    for(int i = 0; i < cantidadRegistros; i++){
+        fread(&vector[i], sizeof(Ingreso), 1, pArchivo);
+    }
+    fclose(pArchivo);
+}
+
+bool ArchivoIngresos::ModificarIngreso(Ingreso ingreso, int posicion){
+    FILE *pArchivo = fopen(_nombreArchivo.c_str(), "rb+");
+
+    if(pArchivo == NULL){
+        return false;
+    }
+
+    fseek(pArchivo, posicion * sizeof(Ingreso), SEEK_SET);
+
+    bool ok = fwrite(&ingreso, sizeof(Ingreso), 1, pArchivo);
+
+    fclose(pArchivo);
+    return ok;
 }
 
 
