@@ -1,6 +1,13 @@
-#ifndef GESTIONINGRESOS_H_INCLUDED
-#define GESTIONINGRESOS_H_INCLUDED
+#pragma once
+#include "ArchivoIngresos.h"
 
+class GestionIngresos {
+private:
+    ArchivoIngresos _archivoIngresos;
 
-
-#endif // GESTIONINGRESOS_H_INCLUDED
+public:
+    GestionIngresos();
+    
+    void registrarIngreso(); 
+    void listarIngresos();   
+};
