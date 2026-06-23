@@ -74,7 +74,6 @@ void GestionEgresos::registrarEgreso() {
 
     if (_archivoEgresos.guardar(reg)) {
         
-    
         emp.setEstado(false); 
         archEmp.guardarEnPosicion(emp, posEmp); 
         
