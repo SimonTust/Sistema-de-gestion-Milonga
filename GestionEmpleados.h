@@ -1,6 +1,15 @@
-#ifndef GESTIONEMPLEADOS_H_INCLUDED
-#define GESTIONEMPLEADOS_H_INCLUDED
+#pragma once
+#include "ArchivoEmpleados.h"
 
+class GestionEmpleados {
+private:
+    ArchivoEmpleados _archivoEmpleados;
 
-
-#endif // GESTIONEMPLEADOS_H_INCLUDED
+public:
+    GestionEmpleados();
+    
+    void cargarEmpleado();     
+    void modificarEmpleado(); 
+    void buscarEmpleado();     
+    void listarEmpleados();    
+};
