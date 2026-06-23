@@ -1,6 +1,15 @@
-#ifndef GESTIONVACACIONES_H_INCLUDED
-#define GESTIONVACACIONES_H_INCLUDED
+#pragma once
+#include "ArchivoVacaciones.h"
 
+class GestionVacaciones {
+private:
+    ArchivoVacaciones _archivoVacaciones;
 
-
-#endif // GESTIONVACACIONES_H_INCLUDED
+public:
+    GestionVacaciones();
+    
+    void menu();                   
+    void registrarVacaciones();      
+    void listarVacaciones();         
+    void consultarSaldoVacaciones(); 
+};
